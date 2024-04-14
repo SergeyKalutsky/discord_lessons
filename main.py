@@ -25,9 +25,9 @@ async def on_message(message):
         await message.channel.send('Ожидайте перевод...')
         res = translate(text)
         await message.channel.send(res)
-    if 'lon' in message.content and 'lat' in message.content and '!weather':
-        _, _, lon, _, lat = message.content.split()
-        res = get_weather(lon, lat) 
+    if '!weather' in message.content:
+        _, city = message.content.split()
+        res = get_weather(city) 
         await message.channel.send('время | облачность | температура | осадки\n' + res)
     if message.content == '!duck':
         url = get_random_duck()
