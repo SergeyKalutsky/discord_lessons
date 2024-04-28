@@ -26,35 +26,57 @@
 72h | 9 | -2 | snow -->
 
 <html>
-
-<head>
-
-</head>
-
-<body>
-    <div>
+    <head>
+        <style>
+            table {
+                width: 30%;
+                border-collapse: collapse;
+            }
+            table, th, td {
+                border: 1px solid black;
+            }
+            th, td {
+                padding: 10px;
+                text-align: center;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+        </style>
+    </head>
+<body style="background-color: white;" >
+    <div >
         <h1>Погода в Алмате</h1>
         <table>
+           <thead>
             <tr>
-                <td>6h</td>
+                <th>Время</th>
+                <th>Облачность</th>
+                <th>Температура</th>
+                <th>Осадки</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+                <td>3h</td>
                 <td>9</td>
-                <td>17</td>
-                <td>snow</td>
+                <td>18</td>
+                <td>none</td>
             </tr>
             <tr>
-                <td>9h</td>
+                <td>3h</td>
                 <td>9</td>
-                <td>-1</td>
-                <td>snow</td>
+                <td>18</td>
+                <td>none</td>
             </tr>
             <tr>
-                <td>12h</td>
+                <td>3h</td>
                 <td>9</td>
-                <td>-3</td>
-                <td>snow</td>
+                <td>18</td>
+                <td>none</td>
             </tr>
+           </tbody>
         </table>
     </div>
 </body>
-
 </html>

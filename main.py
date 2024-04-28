@@ -27,8 +27,10 @@ async def on_message(message):
         await message.channel.send(res)
     if '!weather' in message.content:
         _, city = message.content.split()
-        res = get_weather(city) 
-        await message.channel.send('время | облачность | температура | осадки\n' + res)
+        get_weather(city) 
+        with open('page.png', 'rb') as f:
+            picture = discord.File(f)
+        await message.channel.send(file=picture)
     if message.content == '!duck':
         url = get_random_duck()
         await message.channel.send(url)
